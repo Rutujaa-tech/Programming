@@ -8,4 +8,3 @@ Ans = No1 * No2
 
 print("Multiplication is :",Ans)
 
-#input() by default str gheto
