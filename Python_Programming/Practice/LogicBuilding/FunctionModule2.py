@@ -1,4 +1,4 @@
-import Marvellous as MI                         # as meansS ( MI in marvellous topen name)
+import Marvellous as MI                        
 def main():
     print("Enter first number:")
     Value1 = int(input())
