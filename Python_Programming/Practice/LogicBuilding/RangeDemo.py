@@ -1,4 +1,4 @@
-Data = range(5)     #Starting point by default 0    Ending point 5
+Data = range(5)     
 
 print(Data)
 print(type(Data))
@@ -12,4 +12,3 @@ print(Data2)
 print(len(Data))
 print(len(Data1))
 print(len(Data2))
-#sequence madhe len method fkt chalto
