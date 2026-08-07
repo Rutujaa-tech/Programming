@@ -1,17 +1,10 @@
-print("Enter first Number:")
-No1 = int(input())
+import pandas as pd
 
-print("Enter second Number:")
-No2 = int(input())
+Datapath = "student_performance_ml.csv"
+df = pd.read_csv(Datapath)
 
-Ans = No1 + No2
-print("Addition is :",Ans)
+print("Total student :",len(df))
 
-Ans = No1 - No2
-print("Subtraction is :",Ans)
+print("Passed student :",(df["FinalResult"] == 1).sum())
 
-Ans = No1 * No2
-print("Multiplication is :",Ans)
-
-Ans = No1 / No2
-print("Division is :",Ans)
+print("Failed student :",(df["FinalResult"] == 0).sum())

@@ -1,16 +1,14 @@
-#program which accept one number and print sum of first N natural numbers.
+import pandas as pd
+import matplotlib.pyplot as plt
 
-def main():
+df = pd.read_csv("student_performance_ml.csv")
 
-    No = int(input("Enter number is:"))
-    Sum = 0
+plt.scatter(df["SleepHours"],
+            df["FinalResult"])
 
-    for i in range(1,No + 1):
-        Sum = Sum + i
-        
-    print("sum of natural numbers is :",Sum)
-        
-if __name__ == "__main__":
-    main()
+plt.title("SleepHours vs FinalResult")
 
+plt.xlabel("SleepHours")
+plt. ylabel("FinalResult")
 
+plt.show()

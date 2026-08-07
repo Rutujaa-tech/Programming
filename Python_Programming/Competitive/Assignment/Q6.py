@@ -1,12 +1,13 @@
-#program which accept one number and prints square of that number.
+import pandas as pd 
+import matplotlib.pyplot as plt
 
-def main():
+df = pd.read_csv("student_performance_ml.csv")
 
-    No = int(input("Enter a number: "))
+plt.hist(df["StudyHours"],bins = 10)
 
-    square = No * No
+plt.title("Histogram of StudyHours")
+plt.xlabel("StudyHours")
+plt.ylabel("Frequency")
 
-    print("square of the number is:",square)
+plt.show()
 
-if __name__ == "__main__":
-    main()

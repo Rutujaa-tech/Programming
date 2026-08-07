@@ -1,12 +1,26 @@
-#program which accepts one number and print cube of that number.
+import pandas as pd
+import matplotlib.pyplot as plt
 
-def main():
+df = pd.read_csv("student_performance_ml.csv")
 
-    No = int(input("Enter a number: "))
+pass_students = df[df["FinalResult"] == 1]
+fail_students = df[df["FinalResult"] == 0]
 
-    cube = No * No * No
+plt.scatter(pass_students["StudyHours"], 
+            pass_students["PreviousScore"],
+            color = "green",
+            label = "Pass"
+           )
 
-    print("Cube of number is:",cube)
+plt.scatter(fail_students["StudyHours"],
+            fail_students["PreviousScore"],
+            color="red",
+            label="Fail")
 
-if __name__ == "__main__":
-    main()
+plt.title("StudyHours vs PreviousScore")
+
+plt.xlabel("StudyHours")
+plt.ylabel("PrevoiusScore")
+
+plt.legend()
+plt.show()

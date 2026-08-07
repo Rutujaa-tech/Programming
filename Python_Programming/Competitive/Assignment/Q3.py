@@ -1,8 +1,13 @@
-print("Enter your name:")
-name = input()
+import pandas as pd
 
-print("Enter your age:")
-age = int(input())
+Datapath = "student_performance_ml.csv"
 
-age = age + 1
-print(f"Hello {name},you will turn {age} next year")
+df = pd.read_csv(Datapath)
+
+print("Average StudyHours :",df["StudyHours"].mean())
+
+print("Average Attendance:",df["Attendance"].mean())
+
+print("Maximum PreviousScore:",df["PreviousScore"].max())
+
+print("Minimum SleepHours:",df["SleepHours"].min())

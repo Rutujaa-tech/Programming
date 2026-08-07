@@ -1,14 +1,14 @@
-#program which accept one number and prints multiplication table of that number.
+import pandas as pd
+import matplotlib.pyplot as plt
 
-def main():
-    print("enter number:")
-    No = int(input())
+df = pd.read_csv("student_performance_ml.csv")
 
-    for i in range(1,11):
-        mult = No * i
-        print(mult)
+plt.scatter(df["AssignmentsCompleted"],
+            df["FinalResult"])
 
+plt.title("AssignmentsCompleted vs FinalResult")
 
+plt.xlabel("AssignmentsCompleted")
+plt.ylabel("FinalResult")
 
-if __name__ == "__main__":
-    main()
+plt.show()

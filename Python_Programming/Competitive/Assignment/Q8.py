@@ -1,14 +1,10 @@
-#program which accept one number and check whether it is divisible by 3 and 5
+import pandas as pd
+import matplotlib.pyplot as plt
 
-def main():
+df = pd.read_csv("student_performance_ml.csv")
 
-    No = int(input("Enter a number: "))
+plt.boxplot(df["Attendance"])
 
-    if(No % 3 == 0)and(No % 5 ==0):
-        print("Divisible by 3 and 5")
+plt.title("Attendence Boxplot")
 
-    else:
-        print("not Divisible by 3 and 5")
-
-if __name__ == "__main__":
-    main()
+plt.show()

@@ -1,27 +1,16 @@
-#program which contains one function ChkGreater() that accept two numbers and prints the greater.
+import pandas as pd
 
-def ChkGreater(No1,No2):
-    if(No1 > No2):
-        print("greater number is:",No1)
+df = pd.read_csv("student_performance_ml.csv")
 
-    elif(No2 > No1):
-        print("greater number is:",No2)
+print(df.groupby("FinalResult")["StudyHours"].mean())
+print(df.groupby("FinalResult")["Attendance"].mean())
 
-    else:
-        print("Both numberr are equal")
+# Observation
+"""
+1.Students with FinalResult = 1 (Pass) have higher average StudyHours compared to students with FinalResult = 0 (Fail).
+2.Students who study for more hours have a higher chance of passing.
+3.Pass students have higher average Attendance than fail students.
+4.Higher Attendance improves the FinalResult of students.
+5.Overall, StudyHours and Attendance have a positive impact on student performance.
 
-
-def main():
-
-    print("Enter first number:")
-    Value1 = int(input())
-
-    print("Enter second number:")
-    Value2 = int(input())
-
-    ChkGreater(Value1,Value2)
-
-
-
-if __name__ == "__main__":
-    main()
+"""
