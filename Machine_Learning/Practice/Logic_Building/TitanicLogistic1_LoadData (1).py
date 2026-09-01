@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 #   Description :   Load the data from CSV
 #   Input :         Name of csv file
 #   Output :        Data frame
-#   Author :        Rutuja Manohar Kadam
+#   Author :        Piyush Manohar Khairnar
 #   Date :          16/08/2026
 #-----------------------------------------------------
 def LoadData(filename):
@@ -29,7 +29,7 @@ def LoadData(filename):
 #   Description :   Entry point function
 #   Input :         None
 #   Output :        None
-#   Author :        Rutuja Manohar Kadam
+#   Author :        Piyush Manohar Khairnar
 #   Date :          16/08/2026
 #-----------------------------------------------------
 def main():
